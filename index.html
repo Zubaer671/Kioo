@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anime Store</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://wallpaperaccess.com/full/1968284.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .store {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      overflow-x: auto;
+    }
+
+    .product {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      padding: 15px;
+      width: 250px;
+      position: relative;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .buy-btn {
+      display: none;
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #ff4d6d;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .show {
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌸 Anime Store 🌸</h1>
+
+  <div class="store">
+    <div class="product" onclick="toggleBuy(this)">
+      <img src="https://i.pinimg.com/564x/6f/8a/f2/6f8af27510dce8c0fc9f4e4deef99a0f.jpg" alt="Produk 1">
+      <button class="buy-btn" onclick="buyNow(event, 'Produk 1')">BUY</button>
+    </div>
+    <div class="product" onclick="toggleBuy(this)">
+      <img src="https://i.pinimg.com/564x/8d/69/c6/8d69c60bb1ef7484e0a62676debd7f29.jpg" alt="Produk 2">
+      <button class="buy-btn" onclick="buyNow(event, 'Produk 2')">BUY</button>
+    </div>
+    <div class="product" onclick="toggleBuy(this)">
+      <img src="https://i.pinimg.com/564x/13/13/98/131398145c30f429497429c8787b3133.jpg" alt="Produk 3">
+      <button class="buy-btn" onclick="buyNow(event, 'Produk 3')">BUY</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleBuy(product) {
+      const btn = product.querySelector('.buy-btn');
+      btn.classList.toggle('show');
+    }
+
+    function buyNow(event, productName) {
+      event.stopPropagation(); // agar tidak trigger toggleBuy lagi
+      const phone = '6281234567890'; // Ganti dengan nomor WhatsApp kamu
+      const message = encodeURIComponent(`Saya ingin membeli ${productName}`);
+      const url = `https://wa.me/${phone}?text=${message}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
