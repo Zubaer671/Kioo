@@ -78,12 +78,12 @@
       <button class="buy-btn" onclick="buyNow(event, 'SC BAILA V3')">BUY</button>
     </div>
     <div class="product" onclick="toggleBuy(this)">
-      <img src="https://i.pinimg.com/700x/8d/69/c6/8d69c60bb1ef7484e0a62676debd7f29.jpg" alt="Produk 2">
-      <button class="buy-btn" onclick="buyNow(event, 'Produk 2')">BUY</button>
+      <img src="https://img1.pixhost.to/images/7031/619450910_yunilovejoo.jpg" alt="Produk 2">
+      <button class="buy-btn" onclick="buyNow(event, 'SC PRIVATE')">BUY</button>
     </div>
     <div class="product" onclick="toggleBuy(this)">
-      <img src="https://i.pinimg.com/700x/13/13/98/131398145c30f429497429c8787b3133.jpg" alt="Produk 3">
-      <button class="buy-btn" onclick="buyNow(event, 'Produk 3')">BUY</button>
+      <img src="https://img1.pixhost.to/images/7031/619451271_yunilovejoo.jpg" alt="Produk 3">
+      <button class="buy-btn" onclick="buyNow(event, 'sc public no enc')">BUY</button>
     </div>
   </div>
 
@@ -95,7 +95,7 @@
 
     function buyNow(event, productName) {
       event.stopPropagation(); // agar tidak trigger toggleBuy lagi
-      const phone = '6281234567890'; // Ganti dengan nomor WhatsApp kamu
+      const phone = '6283179700678'; // Ganti dengan nomor WhatsApp kamu
       const message = encodeURIComponent(`Saya ingin membeli ${productName}`);
       const url = `https://wa.me/${phone}?text=${message}`;
       window.open(url, '_blank');
