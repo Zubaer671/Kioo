@@ -3,7 +3,10 @@ RewriteRule ^login$ login.php [L]
 RewriteRule ^flag$ flag.php
 RewriteRule ^admin$ admin.php
 
-<Files "flag.php">
+IyaRewriteEngine On
+RewriteRule ^halamn utama$ index.html [L]
+
+<Files "index.html">
   KONTOLMU PECAH
 </Files>
 index.html
