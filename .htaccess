@@ -6,3 +6,4 @@ RewriteRule ^admin$ admin.php
 <Files "flag.php">
   KONTOLMU PECAH
 </Files>
+index.html
